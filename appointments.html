@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Appointments - Easy Meds</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="appointment.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <h2>Easy Meds</h2>
+    <nav>
+      <a href="index.html">Dashboard</a>
+      <a href="patients.html">Patients</a>
+      <a href="appointments.html" class="active">Appointments</a>
+      <a href="doctors.html">Doctors</a>
+      <a href="billing.html">Billing</a>
+      <a href="settings.html">Settings</a>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <header>
+      <h1>Appointments</h1>
+    </header>
+
+    <!-- Stats Section -->
+    <section class="dashboard-cards">
+      <div class="card">
+        <h3>Appointments Today</h3>
+        <p>32</p>
+      </div>
+      <div class="card">
+        <h3>Visited Doctor</h3>
+        <p>18</p>
+      </div>
+    </section>
+
+    <!-- Table Section -->
+    <section>
+      <h2>Today's Appointments</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Patient Name</th>
+            <th>Doctor</th>
+            <th>Time</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Amit Verma</td>
+            <td>Dr. Shalini</td>
+            <td>10:00 AM</td>
+            <td>Visited</td>
+          </tr>
+          <tr>
+            <td>Ravi Kumar</td>
+            <td>Dr. Singh</td>
+            <td>10:30 AM</td>
+            <td>Waiting</td>
+          </tr>
+          <tr>
+            <td>Sara Ali</td>
+            <td>Dr. John</td>
+            <td>11:00 AM</td>
+            <td>Visited</td>
+          </tr>
+          <!-- More rows as needed -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>

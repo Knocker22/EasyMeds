@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard - Easy Meds</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="profile">
+      <h2>Easy Meds</h2>
+    </div>
+    <nav>
+      <a href="#" class="active"><span>🏠</span> Dashboard</a>
+      <a href="#"><span>🧑‍🤝‍🧑</span> Patients</a>
+      <a href="#"><span>📅</span> Appointments</a>
+      <a href="#"><span>🩺</span> Doctors</a>
+      <a href="#"><span>👩‍💼</span> Staff</a>
+      <a href="#"><span>💳</span> Billing</a>
+      <a href="#"><span>⚙️</span> Settings</a>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="#" id="logout-btn"><span>🚪</span> Logout</a>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <header>
+      <h1>Dashboard</h1>
+    </header>
+
+    <section class="dashboard-cards">
+      <div class="card green">
+        <div class="card-icon">👥</div>
+        <h3>Total Patients</h3>
+        <p>120</p>
+      </div>
+      <div class="card blue">
+        <div class="card-icon">📅</div>
+        <h3>Appointments Today</h3>
+        <p>32</p>
+      </div>
+      <div class="card green">
+        <div class="card-icon">🩺</div>
+        <h3>Doctors Available</h3>
+        <p>15</p>
+      </div>
+      <div class="card red">
+        <div class="card-icon">💳</div>
+        <h3>Pending Bills</h3>
+        <p>8</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById('logout-btn').addEventListener('click', function (e) {
+      e.preventDefault();
+      window.location.href = 'login.html';
+    });
+  </script>
+</body>
+</html>
+  

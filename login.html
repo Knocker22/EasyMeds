@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>EasyMeds Admin Login</title>
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+  <div class="content">
+    <div class="text">
+      EasyMeds Admin
+    </div>
+
+    <!-- ✅ Only ONE form tag -->
+    <form action="dashbord.html" method="GET">
+      <div class="field">
+        <input type="text" name="identifier" required>
+        <span class="fas fa-user"></span>
+        <label>Email or Phone</label>
+      </div>
+
+      <div class="field">
+        <input type="password" name="password" required>
+        <span class="fas fa-lock"></span>
+        <label>Password</label>
+      </div>
+
+      <div class="forgot-pass">
+        <a href="forget.html">Forgot Password?</a>
+       
+      </div>
+
+      <button type="submit">Sign In</button>
+
+      <div class="sign-up">
+        Not a member?
+        <a href="signup.html">Signup now</a>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

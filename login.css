@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  background: #819A91; /* Muted background */
+  text-align: center;
+}
+
+.content {
+  width: 330px;
+  padding: 40px 30px;
+  background: #A7C1A8; /* Form container */
+  border-radius: 10px;
+  box-shadow: -3px -3px 7px #76897f,
+               2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.content .text {
+  font-size: 33px;
+  font-weight: 600;
+  margin-bottom: 35px;
+  color: #EEEFE0;
+}
+
+.field {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.field:nth-child(2) {
+  margin-top: 20px;
+}
+
+.field input {
+  height: 100%;
+  width: 100%;
+  padding-left: 45px;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  background: #EEEFE0;
+  color: #1f2937;
+  border-radius: 25px;
+  box-shadow: inset 2px 2px 5px #b8c2a6,
+              inset -5px -5px 10px #ffffff;
+}
+
+.field input:focus {
+  box-shadow: inset 1px 1px 2px #b8c2a6,
+              inset -1px -1px 2px #ffffff;
+}
+
+.field input::placeholder {
+  color: #D1D8BE;
+  opacity: 0.7;
+}
+
+.field span {
+  position: absolute;
+  color: #819A91;
+  width: 50px;
+  line-height: 50px;
+}
+
+.field label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 45px;
+  pointer-events: none;
+  color: #D1D8BE;
+}
+
+.field input:valid ~ label {
+  opacity: 0;
+}
+
+.forgot-pass {
+  text-align: left;
+  margin: 10px 0 10px 5px;
+}
+
+.forgot-pass a {
+  font-size: 16px;
+  color: #819A91;
+  text-decoration: none;
+}
+
+.forgot-pass:hover a {
+  text-decoration: underline;
+}
+
+button {
+  margin-top: 15px;
+  width: 100%;
+  height: 50px;
+  font-size: 18px;
+  font-weight: 600;
+  background: #819A91;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #EEEFE0;
+  box-shadow: 2px 2px 5px #76897f,
+              -5px -5px 10px #b6ccba;
+  transition: color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  background: #677c73;
+  color: #EEEFE0;
+  box-shadow: inset 2px 2px 5px #b8c2a6,
+              inset -5px -5px 10px #ffffff;
+}
+
+.sign-up {
+  margin: 10px 0;
+  color: #EEEFE0;
+  font-size: 16px;
+}
+
+.sign-up a {
+  color: #819A91;
+  text-decoration: none;
+}
+
+.sign-up a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create Account</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="signup.css"/>
+
+</head>
+<body>
+  <div class="content">
+    <div class="text">Create Account</div>
+    <form action="signup_process.php" method="POST">
+
+      <div class="field">
+        <input type="text" name="first_name" placeholder="First Name" required />
+      </div>
+      <div class="field">
+        <input type="text" name="last_name" placeholder="Last Name" required />
+      </div>
+      <div class="field">
+        <input type="email" name="email" placeholder="Email Address" required />
+      </div>
+      <div class="field" style="position: relative;">
+        <span class="country-code">+977</span>
+        <input type="tel" name="phone" placeholder="98XXXXXXXX" required style="padding-left: 65px;" />
+      </div>
+      <div class="field">
+        <input type="password" name="password" placeholder="Password" required />
+      </div>
+      <div class="field">
+        <input type="password" name="confirm_password" placeholder="Confirm Password" required />
+      </div>
+
+      <!-- Role Selection -->
+      <div class="field">
+        <select name="role" id="roleSelect" required>
+          <option value="" disabled selected>Select Role</option>
+          <option value="doctor">Doctor</option>
+          <option value="nurse">Nurse</option>
+          <option value="patient">Patient</option>
+          <option value="admin">Admin</option>
+          <option value="receptionist">Receptionist</option>
+        </select>
+      </div>
+
+      <!-- Doctor/Nurse Specific Fields -->
+      <div class="field" id="licenseField" style="display:none;">
+        <input type="text" name="license_id" placeholder="Medical License ID" />
+      </div>
+      <div class="field" id="specializationField" style="display:none;">
+        <input type="text" name="specialization" placeholder="Specialization" />
+      </div>
+
+      <!-- Patient Specific Fields -->
+      <div class="field" id="dobField" style="display:none;">
+        <input type="date" name="dob" placeholder="Date of Birth" />
+      </div>
+      <div class="field" id="insuranceField" style="display:none;">
+        <input type="text" name="insurance" placeholder="Insurance Number" />
+      </div>
+
+      <button type="submit">Sign Up <a href="dashbord.html"></a></button>
+
+      <div class="sign-up">
+        Already have an account? <a href="login.html">Login here</a>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    const roleSelect = document.getElementById("roleSelect");
+    const licenseField = document.getElementById("licenseField");
+    const specializationField = document.getElementById("specializationField");
+    const dobField = document.getElementById("dobField");
+    const insuranceField = document.getElementById("insuranceField");
+
+    roleSelect.addEventListener("change", function () {
+      const role = this.value;
+      licenseField.style.display = (role === "doctor" || role === "nurse") ? "block" : "none";
+      specializationField.style.display = (role === "doctor") ? "block" : "none";
+      dobField.style.display = (role === "patient") ? "block" : "none";
+      insuranceField.style.display = (role === "patient") ? "block" : "none";
+    });
+  </script>
+</body>
+</html>

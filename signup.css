@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  background: #EEEFE0; /* Soft background */
+  text-align: center;
+}
+
+.content {
+  width: 350px;
+  padding: 40px 30px;
+  background: #D1D8BE; /* Light sage form background */
+  border-radius: 10px;
+  box-shadow: -3px -3px 7px rgba(129, 154, 145, 0.3),
+               2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.content .text {
+  font-size: 33px;
+  font-weight: 600;
+  margin-bottom: 35px;
+  color: #4a5e57; /* Slightly darker for contrast */
+}
+
+.field {
+  height: 50px;
+  width: 100%;
+  margin-bottom: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.field input,
+.field select {
+  height: 100%;
+  width: 100%;
+  padding-left: 45px;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  background: #EEEFE0;
+  color: #4a5e57;
+  border-radius: 25px;
+  box-shadow: inset 2px 2px 5px #c9cfb7,
+              inset -5px -5px 10px #ffffff;
+  transition: box-shadow 0.3s ease;
+  appearance: none;
+}
+
+.field input::placeholder {
+  color: #819A91;
+  opacity: 0.7;
+}
+
+.field input:focus,
+.field select:focus {
+  box-shadow: inset 1px 1px 2px #bbbfa9,
+              inset -1px -1px 2px #ffffff;
+}
+
+.field select {
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+.field input[type="date"] {
+  padding-left: 20px;
+  color-scheme: light;
+}
+
+.country-code {
+  position: absolute;
+  left: 15px;
+  color: #819A91;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 50px;
+  user-select: none;
+}
+
+button {
+  margin-top: 15px;
+  width: 100%;
+  height: 50px;
+  font-size: 18px;
+  font-weight: 600;
+  background: #A7C1A8;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #ffffff;
+  box-shadow: 2px 2px 5px #b4bea9,
+              -5px -5px 10px #ffffff;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #819A91;
+  color: #ffffff;
+  box-shadow: inset 2px 2px 5px #b2bda6,
+              inset -5px -5px 10px #ffffff;
+}
+
+.sign-up {
+  margin-top: 10px;
+  color: #4a5e57;
+  font-size: 16px;
+}
+
+.sign-up a {
+  color: #819A91;
+  text-decoration: none;
+}
+
+.sign-up a:hover {
+  text-decoration: underline;
+}
+
+.field select::-ms-expand {
+  display: none;
+}
